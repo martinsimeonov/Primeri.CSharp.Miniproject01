@@ -21,22 +21,7 @@ namespace Calculations
 				if (param.Length > 1 && _userInput.Contains ( "-п" ) )
 				{
 					//Помощ за командата
-					_c.Result ();	Console.Write ("[яма]");
-					_c.Default ();	Console.WriteLine (" - команда за пресмятане на строителна яма");
-
-					_c.Command ();	Console.Write ("параметри: ");
-					_c.Default ();	Console.WriteLine ("а1 b1 a2 b2 h\n");
-
-					_c.Command ();	Console.Write ("a1 и b1");
-					_c.Default ();	Console.WriteLine (" - ширина и дължина на горната страна на изкопа");
-
-					_c.Command ();	Console.Write ("a2 и b2");
-					_c.Default ();	Console.WriteLine (" - ширина и дължина на долната страна на изкопа");
-
-					_c.Command ();	Console.Write ("h ");
-					_c.Default ();	Console.WriteLine (" - височина на изкопа\n");
-
-
+					help ();
 				}
 
 				if (param.Length > 1 && !_userInput.Contains ( "-п" ) )
@@ -86,6 +71,23 @@ namespace Calculations
 		}
 
 		//Помощ за командата
+		private void help ()
+		{
+			_c.Result ();	Console.Write ("[яма]");
+			_c.Default ();	Console.WriteLine (" - команда за пресмятане на строителна яма");
+
+			_c.Command ();	Console.Write ("параметри: ");
+			_c.Default ();	Console.WriteLine ("а1 b1 a2 b2 h\n");
+
+			_c.Command ();	Console.Write ("a1 и b1");
+			_c.Default ();	Console.WriteLine (" - ширина и дължина на горната страна на изкопа");
+
+			_c.Command ();	Console.Write ("a2 и b2");
+			_c.Default ();	Console.WriteLine (" - ширина и дължина на долната страна на изкопа");
+
+			_c.Command ();	Console.Write ("h ");
+			_c.Default ();	Console.WriteLine (" - височина на изкопа\n");
+		}
 	}
 }
 
