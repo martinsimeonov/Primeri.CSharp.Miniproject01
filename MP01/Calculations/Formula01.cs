@@ -2,6 +2,7 @@
 
 namespace Calculations
 {
+
 	public class Formula01
 	{
 		//Библиотеки
@@ -39,7 +40,6 @@ namespace Calculations
 					}
 							
 				}
-
 
 			} catch {
 			}
