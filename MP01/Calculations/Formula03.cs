@@ -2,15 +2,14 @@
 
 namespace Calculations
 {
-	public class Formula02
+	public class Formula03
 	{
-		Colors.ForCLI _cl = new Colors.ForCLI ();
-		
-		//Формула за вдлъбнът ъгъл
-		public Formula02 ()
+		private Colors.ForCLI _cl = new Colors.ForCLI ();
+
+
+		public Formula03 ()
 		{
 		}
-
 
 		public void calc ( string _input )
 		{
@@ -29,7 +28,7 @@ namespace Calculations
 
 					if ( runCalculate (param, out result ) )
 					{
-						_cl.Default ();		Console.Write ("Обемът на вдлъбнатият ъгъл е ");
+						_cl.Default ();		Console.Write ("Обемът на изпъкналият ъгъл е ");
 						_cl.Result ();		Console.Write ( result.ToString ("N2") );
 						_cl.Default ();		Console.WriteLine ( " m3\n" );
 					}else{
@@ -49,7 +48,7 @@ namespace Calculations
 				double b = 0; Double.TryParse ( _param[2], out b);
 				double h = 0; Double.TryParse ( _param[3], out h);
 
-				_result = a * b * h / 3;
+				_result = 2 * a * b * h / 3;
 
 				return true;
 			}catch{
@@ -60,12 +59,10 @@ namespace Calculations
 			return false;
 		}
 
-
-
 		private void help ()
 		{
-			_cl.Result ();		Console.Write ("[въгъл]");
-			_cl.Default ();		Console.WriteLine (" - вдлъбнат ъгъл");
+			_cl.Result ();		Console.Write ("[иъгъл]");
+			_cl.Default ();		Console.WriteLine (" - изпъкнъл ъгъл");
 
 			_cl.Command ();		Console.Write ("параметри: ");
 			_cl.Default ();		Console.WriteLine (" a, b и h\n");
