@@ -2,7 +2,8 @@
 
 namespace Calculations
 {
-
+	/// <summary>
+	/// Клас за формула за обикновенна строителна яма. (Формула 1)</summary>
 	public class Formula01
 	{
 		//Библиотеки
